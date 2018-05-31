@@ -9,10 +9,11 @@ const initialState = {
 };
 
 function reducer(state = initialState, action) {
+  console.log('state :', state,action);
   switch(action.type) {
     case 'INCREMENT':
       return {
-        count: state.count + 1
+        count: state.count + action.count
       };
     case 'DECREMENT':
       return {

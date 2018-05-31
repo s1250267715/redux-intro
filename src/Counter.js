@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 
 // Add this function:
 function mapStateToProps(state) {
-  console.log('state :', state);
   return {
     count: state.count
   };
@@ -11,7 +10,7 @@ function mapStateToProps(state) {
 
 class Counter extends React.Component {
   increment = () => {
-    this.props.dispatch({ type: 'INCREMENT' });
+    this.props.dispatch({ type: 'INCREMENT',count:10 });
   }
 
   decrement = () => {
